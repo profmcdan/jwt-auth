@@ -29,7 +29,7 @@ const validateRegisterInput = data => {
   }
 
   if (Validator.isEmpty(data.password)) {
-    errors.email = "Password is required";
+    errors.password = "Password is required";
   }
 
   if (!Validator.equals(data.password, data.password2)) {
@@ -37,7 +37,7 @@ const validateRegisterInput = data => {
   }
 
   if (Validator.isEmpty(data.password2)) {
-    errors.password2 = "Password is required";
+    errors.password2 = "Confirm Password is required";
   }
 
   return {

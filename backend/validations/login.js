@@ -14,12 +14,8 @@ const validateLoginInput = data => {
     errors.email = "Email is required";
   }
 
-  if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
-    errors.name = "Name must be between 6 and 30 characters";
-  }
-
   if (Validator.isEmpty(data.password)) {
-    errors.email = "Password is required";
+    errors.password = "Password is required";
   }
 
   return {
